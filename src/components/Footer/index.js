@@ -20,7 +20,7 @@ export default function Footer() {
     <>
       <Wrapper>
         <Wrapper.Container>
-          Footer
+          <p>Desenvolvido por mim com React e ❤</p>
         </Wrapper.Container>
       </Wrapper>
     </>

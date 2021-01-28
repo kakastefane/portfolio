@@ -7,6 +7,9 @@ import Footer from '../src/components/Footer';
 
 const Hero = styled.section`
   width: 100%;
+  padding: 150px 0;
+  display: flex;
+  align-items: center;
 `;
 
 Hero.Container = styled.section`
@@ -21,6 +24,8 @@ Hero.Container = styled.section`
 
 Hero.Title = styled.h2`
   font-size: 50px;
+  display: flex;
+  flex-direction: column;
 `;
 
 Hero.Subtitle = styled.p`
@@ -42,11 +47,21 @@ export default function Home() {
       <Hero>
         <Hero.Container>
           {/* eslint-disable-next-line react/no-unescaped-entities */}
-          <Hero.Title>Hi, I'm Kariston Silva, web developer.</Hero.Title>
+          <Hero.Title>
+            <span>Hi,</span>
+            {' '}
+            <span>Im Kariston Silva,</span>
+            {' '}
+            <span>web developer.</span>
+          </Hero.Title>
           <Hero.Subtitle>Front End Developer / Wordpress Expert</Hero.Subtitle>
           <Hero.Button href="#">Contact me!</Hero.Button>
         </Hero.Container>
       </Hero>
+      <section>
+        <h2>About me</h2>
+        <p />
+      </section>
       <Footer />
     </>
   );

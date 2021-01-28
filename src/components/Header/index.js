@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Image from 'next/image';
+
 const Wrapper = styled.header`
   width: 100%;
   padding: 30px 0;
@@ -20,13 +22,10 @@ const SiteName = styled.h1`
   display: flex;
   align-items: center;
   font-size: 24px;
-`;
-SiteName.Icon = styled.span`
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
-  border-radius: 3px;
-  background-color: ${({ theme }) => theme.colors.primary};
+
+  span {
+    margin-left: 15px;
+  }
 `;
 
 const Menu = styled.nav`
@@ -60,8 +59,14 @@ export default function Header() {
       <Wrapper>
         <Wrapper.Container>
           <SiteName>
-            <SiteName.Icon />
-            kariston.dev
+            <Image
+              src="/img/ico-karistondev.svg"
+              alt="Icone"
+              layout="fixed"
+              width={50}
+              height={50}
+            />
+            <span>kariston.dev</span>
           </SiteName>
           <Menu>
             <Menu.Link href="#">Home</Menu.Link>
